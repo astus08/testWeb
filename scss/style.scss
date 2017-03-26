@@ -1,0 +1,226 @@
+$backgroundColor: #8BC34A;
+$menu-width: 250px;
+$menu-height: 66px;
+
+@import "compass";
+
+@font-face {
+    font-family: "Roboto";
+    src: url('../roboto.ttf') format("truetype");
+}  
+
+html, body{
+    font-family: Roboto;
+
+    font-size: 16px;
+    line-height: 1.4;
+    height: 100%;
+
+    margin: 0;
+    padding: 0;
+}
+
+.site-container, .pusher, .content {
+    height: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+.content{
+    margin: 0 20px;
+    overflow: hidden;
+    padding-top: $menu-height;
+}
+
+.header{
+    position: fixed;
+
+    left: 0;
+    right: 0;
+    height: $menu-height;
+
+    line-height: $menu-height;
+    color: #fff;
+
+    background: $backgroundColor;
+}
+
+.align-right{
+    margin-right: auto;
+}
+
+.logo{
+    font-weight: bold;
+    padding: 0 24px;
+    float: left;
+}
+
+.menu{
+    position: relative;
+    $numberElement : 5;
+    $sizeElement: 100px;
+
+    display: flex;
+    justify-content: center;
+
+    hr{
+        position: absolute;
+        height: .25rem;
+        width: $sizeElement;
+        margin:0;
+        background: darken($backgroundColor, 15%);
+        border: none;
+        transition: .3s ease-in-out;
+    }
+
+    a {
+        width: $sizeElement;
+        text-align: center;        
+    }
+}
+
+
+
+.tab-content{
+    display: none;
+
+    &.active{
+        display: block;
+        margin-top: 5px;
+    }
+}
+
+div.card {
+    width: 250px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+
+    .container{
+        padding: 10px;
+    }
+}
+
+@media only screen and (max-width: 700px){
+    .header{
+        position: static;
+    }
+
+    img{
+        width: 100%;
+    }
+
+
+    .content{
+        margin:0;
+        overflow: hidden;
+        padding-top: 0px;
+        overflow-y: scroll;
+
+        position: absolute;
+        top: $menu-height;
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .logo{
+        padding: 0 12px;
+    }
+
+    .icon{
+        position: relative;
+        display: block;
+        float: left;
+        width: 47px;
+        height: $menu-height;
+
+        cursor: pointer;
+
+        &::after {
+            content:'';
+            position: absolute;
+            display: block;
+            width: 16px;
+            height: 0;
+            top: 16px;
+            left: 15px;
+            box-shadow: 0 10px 0 1px #fff,
+                        0 16px 0 1px #fff,
+                        0 22px 0 1px #fff;
+                        
+            transition-duration: 0.3s;
+        }
+
+        &:hover::after{
+            box-shadow: 0 8px 0 1px #fff,
+                        0 16px 0 1px #fff,
+                        0 24px 0 1px #fff;
+        }
+
+    }
+
+    .menu {
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+
+        background-color: $backgroundColor;
+
+        width: $menu-width;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+
+        transform: translateX(-250px);
+        transition-duration: 0.3s;
+
+        a {
+            display: block;
+            height: 40px;
+            width: $menu-width;
+
+            text-align: center;
+            line-height: 40px;
+
+            border-bottom: 1px solid $backgroundColor;
+        }
+        
+        hr{
+            display: none;
+        }
+    }
+
+    .pusher {
+        transform: translateX(0px);
+        transition-duration: 0.3s;
+        height: 100%;
+    }
+
+    .with--sidebar{
+        .pusher{
+            transform: translateX($menu-width);
+        }
+
+        .site-chache{
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+    }
+
+    .site-container {
+        overflow: hidden;
+        height: 100%;
+    }
+}
+
+@import "checkbox.scss"

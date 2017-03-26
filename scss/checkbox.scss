@@ -1,0 +1,119 @@
+$default-transition-duration: 0.3s;
+
+.switch {
+    $trueColor: #8BC34A;
+    $falseColor: #F44336;
+    $border-radius : 30px;
+    $switchTotalWidth: 150px;
+    $sizeCursor: 20px;
+    $marginCursor: 4px;
+
+    cursor: pointer;
+
+    width: $switchTotalWidth/2 + (($sizeCursor+$marginCursor*2)/2);
+    @include border-radius($border-radius - 2px);
+    display: inline-block;
+    vertical-align: middle;
+    overflow: hidden;
+    height: $sizeCursor+$marginCursor*2;
+
+    input {
+        display: none;
+    }
+
+    .switch-container{
+        display: inline-block;
+        width: $switchTotalWidth;
+        margin-left: -($switchTotalWidth/2) + (($sizeCursor+$marginCursor*2)/2);
+        height: $sizeCursor+$marginCursor*2;
+        @include transition-duration;
+    }
+
+    .on, .off{
+        display: inline-block;
+        float: left;
+        background-color: $trueColor;
+        width: 50%; height: $sizeCursor;
+        padding: $marginCursor 0;
+        text-align: center;
+        color: #fff;
+        font-size: 15px;
+        position: relative;
+        z-index: 1;       
+    }
+
+    .on{
+        @include border-left-radius($border-radius);
+    }
+
+    .off{
+        background-color: $falseColor;
+        @include border-right-radius($border-radius);
+    }
+
+    .mid{
+        $size: $sizeCursor;
+
+        display: inline-block;
+        float: left;
+        width: $sizeCursor;height: $sizeCursor;
+        @include border-radius($border-radius);
+        background-color: #fff;
+        margin-left: -14px;
+        margin-right: -14px;
+        position: relative;
+        z-index: 2;
+        border: $marginCursor solid $falseColor;
+        
+        @include transition-duration;
+    }
+
+    input:checked + .switch-container {
+        margin: 0;
+        
+        .mid{
+            border-color: $trueColor;
+        }
+    }
+}
+
+
+.radio {
+    input {
+        display: none;
+    }
+
+    .rounded {
+        $sizeRounded: 9px;
+        $color: #aaa;
+
+        background-color: #fff;
+
+        border: 3px solid $color;
+        width: $sizeRounded; height: $sizeRounded;
+
+        display: inline-block;
+        vertical-align: middle;
+        @include border-radius($sizeRounded);
+
+        position:relative;
+        margin-left: 20px;
+    }
+    
+    input:checked + .rounded{
+        $colorChecked: $backgroundColor;
+
+        border-color: $colorChecked;
+
+        &:after{
+            content: "";
+            display: block;
+            width: 5px; height: 5px;
+            background-color: $colorChecked;
+            position: absolute;
+
+            top: 2px;left: 2px;
+            @include border-radius(2px);
+        }
+    }
+}
