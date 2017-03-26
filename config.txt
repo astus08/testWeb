@@ -1,0 +1,26 @@
+config.rb :
+
+http_path = "/"
+css_dir = "/style/"
+sass_dir = "/style/"
+images_dir = "/img/"
+javascripts_dir = "/js/"
+
+----------------
+
+cmd : compass watch
+cmd : browser-sync start --server --files "*.html, style/*.css, js/*.js"
+
+----------------
+
+Install :
+
+Compass :
+    - Install ruby
+    - cmd : gem install sass
+            gem install compass
+    - Include config.rb in the project
+
+browser-sync :
+    - Install node.js
+    - cmd : npm install -g browser-sync

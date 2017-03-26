@@ -24,18 +24,20 @@ html, body{
     height: 100%;
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
-}
-.content{
+.site-content {
     margin: 0 20px;
     overflow: hidden;
     padding-top: $menu-height;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 .header{
     position: fixed;
+    z-index: 10;
 
     left: 0;
     right: 0;
@@ -89,16 +91,6 @@ a {
     &.active{
         display: block;
         margin-top: 5px;
-    }
-}
-
-div.card {
-    width: 250px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    text-align: center;
-
-    .container{
-        padding: 10px;
     }
 }
 
@@ -223,4 +215,5 @@ div.card {
     }
 }
 
-@import "checkbox.scss"
+@import "checkbox.scss";
+@import "input.scss";

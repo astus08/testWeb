@@ -43,4 +43,16 @@
         $(".menu>hr").css("margin-left", underlinePosition+"px");
     });
 
+    $('.field-input').focus(function(){
+        $(this).parent().addClass('isFocused hasLabel');
+    });
+
+    $('.field-input').blur(function(){
+        parent = $(this).parent();
+        parent.removeClass('isFocused');
+        if($(this).val() == ''){
+            parent.removeClass('hasLabel');
+        }
+    });
+
 })(jQuery);
