@@ -1,0 +1,44 @@
+/* line 3, ../scss/style.scss */
+body {
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  margin: 0;
+}
+/* line 8, ../scss/style.scss */
+body img {
+  transition-duration: 0.5s;
+}
+
+/* line 13, ../scss/style.scss */
+body.night {
+  background: #333333;
+}
+/* line 16, ../scss/style.scss */
+body.night img {
+  transform: rotate(180deg);
+}
+/* line 20, ../scss/style.scss */
+body.night p {
+  color: #fff;
+}
+
+/* line 25, ../scss/style.scss */
+.taquin input {
+  width: 100px;
+  height: 100px;
+  font-size: 2em;
+}
+
+/* line 30, ../scss/style.scss */
+.emptyCase {
+  background: inherit;
+  border: 2px solid transparent;
+  outline: none;
+}
+
+/* line 36, ../scss/style.scss */
+p {
+  font-size: 1.5em;
+  display: inline;
+}

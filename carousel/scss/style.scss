@@ -1,0 +1,52 @@
+@import "compass";
+
+.wrapper {
+    width: 600px;
+    margin-top: 80px;
+    @include perspective(800);
+}
+
+.allPlan{
+    width: 200px; height: 200px;
+    margin: 0 auto;
+    @include transform-style(preserve-3d);
+    @include animation(Carrousel 10s infinite linear);
+
+    & > .plan_1 {
+        @include transform(translateZ(200px));
+    }
+    & > .plan_2 {
+        @include transform(rotateY(60deg) translateZ(200px));
+    }
+    & > .plan_3 {
+        @include transform(rotateY(120deg) translateZ(200px));
+    }
+    & > .plan_4 {
+        @include transform(rotateY(180deg) translateZ(200px));
+    }
+    & > .plan_5 {
+        @include transform(rotateY(240deg) translateZ(200px));
+    }
+    & > .plan_6 {
+        @include transform(rotateY(300deg) translateZ(200px));
+    }
+
+    img {
+        width: 200px;height: 200px;
+    }
+}
+
+.plan {
+    position: absolute;
+    height: 200px;  width: 200px;
+
+    text-align: center;
+    font-size: 8em;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+@include keyframes(Carrousel) {
+    from { @include transform(rotateY(0deg)); }
+    to { @include transform(rotateY(360deg)); }
+}
