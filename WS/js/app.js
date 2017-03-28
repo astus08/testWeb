@@ -33,3 +33,8 @@ function move(x, y, button){
 
     console.log($('.score'));
 }
+
+$('.case').click(function(e){
+    $(this).toggleClass("return");
+    console.log($(this));
+});

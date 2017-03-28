@@ -37,3 +37,17 @@ p {
     font-size: 1.5em;
     display: inline;
 }
+
+.jeu {
+    height: 520px;width: 520px;
+    margin: auto;
+}
+
+.case{
+    margin:10px;
+    border: 1px solid black;
+    width: 100px;height: 100px;
+    float: left;
+
+    img { width: 100px;height: 100px;}
+}

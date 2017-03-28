@@ -42,3 +42,24 @@ p {
   font-size: 1.5em;
   display: inline;
 }
+
+/* line 41, ../scss/style.scss */
+.jeu {
+  height: 520px;
+  width: 520px;
+  margin: auto;
+}
+
+/* line 46, ../scss/style.scss */
+.case {
+  margin: 10px;
+  border: 1px solid black;
+  width: 100px;
+  height: 100px;
+  float: left;
+}
+/* line 52, ../scss/style.scss */
+.case img {
+  width: 100px;
+  height: 100px;
+}
