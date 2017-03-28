@@ -35,6 +35,22 @@ function move(x, y, button){
 }
 
 $('.case').click(function(e){
-    $(this).toggleClass("return");
-    console.log($(this));
+    e.preventDefault();
+    if (!$(this).hasClass("return") && !$(this).hasClass("valide")){
+        $(this).addClass("return");
+        $(this).append("<img src=\"img/vignette" + $(this).attr('class').split(' ')[1] + ".jpg\" alt=\"image\">")
+
+        if ($('.case.return').length == 2){
+            if($('.case.return.'+$(this).attr('class').split(' ')[1]).length == 2) {
+                $('.case.return.'+$(this).attr('class').split(' ')[1]).addClass("valide");
+            } else {
+                $('.case.return').children().remove();
+            }
+            $('.case.return').removeClass("return");
+        }
+    } else if (!$(this).hasClass("valide")){
+        $(this).removeClass("return");
+        
+        $(this).children().remove();
+    }
 });

@@ -15,7 +15,7 @@ body.night {
   background: #333333;
 }
 /* line 16, ../scss/style.scss */
-body.night img {
+body.night img.horloge {
   transform: rotate(180deg);
 }
 /* line 20, ../scss/style.scss */
@@ -52,13 +52,14 @@ p {
 
 /* line 46, ../scss/style.scss */
 .case {
-  margin: 10px;
+  margin: 14px;
   border: 1px solid black;
   width: 100px;
   height: 100px;
   float: left;
+  background-color: #49d5e0;
 }
-/* line 52, ../scss/style.scss */
+/* line 53, ../scss/style.scss */
 .case img {
   width: 100px;
   height: 100px;
