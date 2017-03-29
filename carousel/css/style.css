@@ -114,7 +114,9 @@
 }
 /* line 55, ../scss/style.scss */
 #countryList ul {
+  width: 200px;
   background-color: #eee;
   cursor: pointer;
   list-style-type: none;
+  text-align: left;
 }

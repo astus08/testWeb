@@ -3,7 +3,7 @@
 
     if(isset($_POST["query"])) {
         $output = '';
-        $query = "SELECT * FROM tbl_country WHERE country_name LIKE '%".$_POST["query"]."%' ";
+        $query = "SELECT * FROM tbl_country WHERE country_name LIKE '%".$_POST["query"]."%' LIMIT 10";
 
         $result = mysqli_query($connect, $query);
 

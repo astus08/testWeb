@@ -16,22 +16,17 @@ function move(x, y, button){
         return 0;
     }
 
-
     emptyCase.x = x;
     emptyCase.y = y;
 
     var value = $(button).val();
 
-    $('.emptyCase').val(value);
-    $('.emptyCase').removeClass('emptyCase');
-    $(button).val(" ");
-    $(button).addClass('emptyCase');
+    $('.emptyCase').val(value).removeClass('emptyCase');
+    $(button).val(" ").addClass('emptyCase');
 
     nbDeplacement ++;
 
     $('.score').html(nbDeplacement);
-
-    console.log($('.score'));
 }
 
 $('.case').click(function(e){
@@ -49,7 +44,7 @@ $('.case').click(function(e){
                     $('.case.return').children().remove();
                     console.log($('.case.return'));
                     $('.case.return').removeClass("return");
-;                }, 1000);
+                }, 1000);
             }
         }
     } else if (!$(this).hasClass("valide")){
@@ -83,3 +78,7 @@ function initGame() {
     console.log(tableCase);
 
 }
+
+$('p.ex1').click(function(e){
+    $(this).toggleClass("big");
+});

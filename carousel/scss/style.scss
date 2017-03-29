@@ -53,13 +53,11 @@
 
 #countryList {
     ul {
+        width: 200px;
         background-color: #eee;
         cursor: pointer;
         list-style-type: none;
+        text-align: left;
         
-    }
-
-    li {
-
     }
 }
