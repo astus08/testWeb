@@ -112,3 +112,9 @@
     transform: rotateY(360deg);
   }
 }
+/* line 55, ../scss/style.scss */
+#countryList ul {
+  background-color: #eee;
+  cursor: pointer;
+  list-style-type: none;
+}

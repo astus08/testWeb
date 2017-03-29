@@ -9,7 +9,7 @@ javascripts_dir = "/js/"
 ----------------
 
 cmd : compass watch
-cmd : browser-sync start --server --files "*.html, style/*.css, js/*.js"
+cmd : browser-sync start --server --files "*.html, css/*.css, js/*.js"
 
 ----------------
 

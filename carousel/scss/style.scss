@@ -50,3 +50,16 @@
     from { @include transform(rotateY(0deg)); }
     to { @include transform(rotateY(360deg)); }
 }
+
+#countryList {
+    ul {
+        background-color: #eee;
+        cursor: pointer;
+        list-style-type: none;
+        
+    }
+
+    li {
+
+    }
+}

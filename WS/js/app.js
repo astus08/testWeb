@@ -43,10 +43,14 @@ $('.case').click(function(e){
         if ($('.case.return').length == 2){
             if($('.case.return.'+$(this).attr('class').split(' ')[1]).length == 2) {
                 $('.case.return.'+$(this).attr('class').split(' ')[1]).addClass("valide");
+                $('.case.return').removeClass("return");
             } else {
-                $('.case.return').children().remove();
+                setTimeout(function() {
+                    $('.case.return').children().remove();
+                    console.log($('.case.return'));
+                    $('.case.return').removeClass("return");
+;                }, 1000);
             }
-            $('.case.return').removeClass("return");
         }
     } else if (!$(this).hasClass("valide")){
         $(this).removeClass("return");
@@ -54,3 +58,28 @@ $('.case').click(function(e){
         $(this).children().remove();
     }
 });
+
+function initGame() {
+    var tableCase = [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8];
+
+    for(var position=tableCase.length-1; position>=1; position--){
+	
+        //hasard reçoit un nombre entier aléatoire entre 0 et position
+        var hasard=Math.floor(Math.random()*(position+1));
+        
+        //Echange
+        var sauve=tableCase[position];
+        tableCase[position]=tableCase[hasard];
+        tableCase[hasard]=sauve;
+    }
+    var i = 0;
+
+    $('div.case').each(function( index ) {
+        $(this).addClass('' + tableCase[i]);
+        console.log(tableCase[i]);
+        i++;
+    });
+
+    console.log(tableCase);
+
+}
