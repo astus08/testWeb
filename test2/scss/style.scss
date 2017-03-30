@@ -3,7 +3,11 @@
 $headerHeigth: 150px;
 $titleSize: 64px;
 
-$nbElementsPerLine: 8;
+$maxNumberTilesPerLine: 4;
+$widthTiles: 250px;
+$heightTiles: 400px;
+$marginTiles: 10px;
+$paddingTiles: 20px;
 
 * { 
     font-family: Roboto;
@@ -27,7 +31,65 @@ body{
 }
 
 .content {
-    padding-left :100px;
-    padding-right: 100px;
-    margin-top: 16px;
+    width: 100%;
+    
+    text-shadow: 0 0 1px rgba(255,255,255,0.004);
+    font-size: 100%;
+    font-weight: 400;
+    background-color: #f2f2f2;
+}
+
+.grid {
+    max-width: $maxNumberTilesPerLine * ($widthTiles + ($marginTiles + $paddingTiles + 2px)*2);
+    margin: 0 auto;
+    list-style: none;
+    padding: 0;
+
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.element {
+    display: block;
+    margin-top: 10px;
+    padding: 20px;
+    border-radius: 2px;
+    
+    background: white;
+    box-shadow: 1px 2px 1px rgba(170,170,170,0.25);
+
+    height: $heightTiles;
+    //height: $widthTiles - (0.2 * $widthTiles);
+    width: $widthTiles;
+    margin: $marginTiles;
+
+    .image-box {
+        width: $widthTiles/3; height: $widthTiles/3;
+        float: right;
+    }
+
+    img {
+        width: $widthTiles/4; height: $widthTiles/4;
+        overflow: hidden;
+        @include border-radius(50px);
+        box-shadow: 1px 2px 1px rgba(170,170,170,0.25);
+        float: right;
+    }
+
+    .tile-title {
+        font-size: 18px;
+        width: 2*$widthTiles/3;
+        height: $widthTiles/6;
+        text-align: center;
+        padding-top: 4px;
+    }
+
+    .tile-text {
+        font-size: 14px;
+        height: $widthTiles - (0.2 * $widthTiles) - $widthTiles/6;
+
+        overflow: hidden;
+    }
 }
