@@ -10,6 +10,7 @@ javascripts_dir = "/js/"
 
 cmd : compass watch
 cmd : browser-sync start --server --files "*.html, style/*.css, js/*.js"
+      browser-sync start --proxy "localhost:800/testWeb/test2" --files "*.html, *.php, css/*.css, js/*.js"
 
 ----------------
 

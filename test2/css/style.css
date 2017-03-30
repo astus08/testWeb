@@ -1,122 +1,30 @@
-/* line 3, ../scss/style.scss */
-.wrapper {
-  width: 600px;
-  margin-top: 80px;
-  -moz-perspective: 800;
-  -webkit-perspective: 800;
-  perspective: 800;
+/* line 8, ../scss/style.scss */
+* {
+  font-family: Roboto;
 }
 
-/* line 9, ../scss/style.scss */
-.allPlan {
-  width: 200px;
-  height: 200px;
-  margin: 0 auto;
-  -moz-transform-style: preserve-3d;
-  -webkit-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-  -moz-animation: Carrousel 10s infinite linear;
-  -webkit-animation: Carrousel 10s infinite linear;
-  animation: Carrousel 10s infinite linear;
-}
-/* line 15, ../scss/style.scss */
-.allPlan > .plan_1 {
-  -moz-transform: translateZ(200px);
-  -ms-transform: translateZ(200px);
-  -webkit-transform: translateZ(200px);
-  transform: translateZ(200px);
-}
-/* line 18, ../scss/style.scss */
-.allPlan > .plan_2 {
-  -moz-transform: rotateY(60deg) translateZ(200px);
-  -ms-transform: rotateY(60deg) translateZ(200px);
-  -webkit-transform: rotateY(60deg) translateZ(200px);
-  transform: rotateY(60deg) translateZ(200px);
-}
-/* line 21, ../scss/style.scss */
-.allPlan > .plan_3 {
-  -moz-transform: rotateY(120deg) translateZ(200px);
-  -ms-transform: rotateY(120deg) translateZ(200px);
-  -webkit-transform: rotateY(120deg) translateZ(200px);
-  transform: rotateY(120deg) translateZ(200px);
-}
-/* line 24, ../scss/style.scss */
-.allPlan > .plan_4 {
-  -moz-transform: rotateY(180deg) translateZ(200px);
-  -ms-transform: rotateY(180deg) translateZ(200px);
-  -webkit-transform: rotateY(180deg) translateZ(200px);
-  transform: rotateY(180deg) translateZ(200px);
-}
-/* line 27, ../scss/style.scss */
-.allPlan > .plan_5 {
-  -moz-transform: rotateY(240deg) translateZ(200px);
-  -ms-transform: rotateY(240deg) translateZ(200px);
-  -webkit-transform: rotateY(240deg) translateZ(200px);
-  transform: rotateY(240deg) translateZ(200px);
-}
-/* line 30, ../scss/style.scss */
-.allPlan > .plan_6 {
-  -moz-transform: rotateY(300deg) translateZ(200px);
-  -ms-transform: rotateY(300deg) translateZ(200px);
-  -webkit-transform: rotateY(300deg) translateZ(200px);
-  transform: rotateY(300deg) translateZ(200px);
-}
-/* line 34, ../scss/style.scss */
-.allPlan img {
-  width: 200px;
-  height: 200px;
+/* line 12, ../scss/style.scss */
+body {
+  margin: 0;
 }
 
-/* line 39, ../scss/style.scss */
-.plan {
-  position: absolute;
-  height: 200px;
-  width: 200px;
-  text-align: center;
-  font-size: 8em;
+/* line 16, ../scss/style.scss */
+.header {
+  margin: 0;
+  height: 150px;
+  background-color: #4383f1;
   color: #fff;
-  background-color: rgba(0, 0, 0, 0.5);
+}
+/* line 22, ../scss/style.scss */
+.header .title {
+  padding-top: 37px;
+  padding-left: 30px;
+  font-size: 64px;
 }
 
-@-moz-keyframes Carrousel {
-  from {
-    -moz-transform: rotateY(0deg);
-    transform: rotateY(0deg);
-  }
-  to {
-    -moz-transform: rotateY(360deg);
-    transform: rotateY(360deg);
-  }
-}
-@-webkit-keyframes Carrousel {
-  from {
-    -webkit-transform: rotateY(0deg);
-    transform: rotateY(0deg);
-  }
-  to {
-    -webkit-transform: rotateY(360deg);
-    transform: rotateY(360deg);
-  }
-}
-@keyframes Carrousel {
-  from {
-    -moz-transform: rotateY(0deg);
-    -ms-transform: rotateY(0deg);
-    -webkit-transform: rotateY(0deg);
-    transform: rotateY(0deg);
-  }
-  to {
-    -moz-transform: rotateY(360deg);
-    -ms-transform: rotateY(360deg);
-    -webkit-transform: rotateY(360deg);
-    transform: rotateY(360deg);
-  }
-}
-/* line 55, ../scss/style.scss */
-#countryList ul {
-  width: 200px;
-  background-color: #eee;
-  cursor: pointer;
-  list-style-type: none;
-  text-align: left;
+/* line 29, ../scss/style.scss */
+.content {
+  padding-left: 100px;
+  padding-right: 100px;
+  margin-top: 16px;
 }
