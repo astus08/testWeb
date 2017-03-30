@@ -52,13 +52,3 @@ p {
 
     img { width: 100px;height: 100px;}
 }
-
-p.ex1 {
-    font-size: 1em;
-    //@include transition-duration(0.5s);
-
-    &.big {
-        font-size: 2em;
-        //@include transition(font-size(2em));
-    }
-}
