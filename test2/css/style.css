@@ -1,37 +1,42 @@
-/* line 12, ../scss/style.scss */
+/* line 16, ../scss/style.scss */
 * {
   font-family: Roboto;
 }
 
-/* line 16, ../scss/style.scss */
+/* line 20, ../scss/style.scss */
 body {
   margin: 0;
 }
 
-/* line 20, ../scss/style.scss */
-.header {
-  margin: 0;
-  height: 150px;
-  background-color: #4383f1;
-  color: #fff;
-}
-/* line 26, ../scss/style.scss */
-.header .title {
-  padding-top: 37px;
-  padding-left: 30px;
-  font-size: 64px;
+/* line 24, ../scss/style.scss */
+.display-none {
+  display: none;
 }
 
-/* line 33, ../scss/style.scss */
+/* line 28, ../scss/style.scss */
+.header {
+  margin: 0;
+  height: 100px;
+  background-color: #2196F3;
+  color: #fff;
+}
+/* line 34, ../scss/style.scss */
+.header .title {
+  padding-top: 18px;
+  padding-left: 30px;
+  font-size: 52px;
+}
+
+/* line 41, ../scss/style.scss */
 .content {
   width: 100%;
   text-shadow: 0 0 1px rgba(255, 255, 255, 0.004);
   font-size: 100%;
   font-weight: 400;
-  background-color: #f2f2f2;
+  background-color: white;
 }
 
-/* line 42, ../scss/style.scss */
+/* line 50, ../scss/style.scss */
 .grid {
   max-width: 1256px;
   margin: 0 auto;
@@ -42,46 +47,134 @@ body {
   justify-content: center;
 }
 
-/* line 54, ../scss/style.scss */
-.element {
+/* line 62, ../scss/style.scss */
+.tile {
   display: block;
-  margin-top: 10px;
-  padding: 20px;
-  border-radius: 2px;
-  background: white;
-  box-shadow: 1px 2px 1px rgba(170, 170, 170, 0.25);
-  height: 400px;
-  width: 250px;
   margin: 10px;
-}
-/* line 68, ../scss/style.scss */
-.element .image-box {
-  width: 83.33333px;
-  height: 83.33333px;
-  float: right;
-}
-/* line 73, ../scss/style.scss */
-.element img {
-  width: 62.5px;
-  height: 62.5px;
+  margin-top: 10px;
+  width: 250px;
+  height: 500px;
+  background: #2196F3;
+  transition: all 150ms ease-in-out;
+  border: 1px solid white;
   overflow: hidden;
+}
+/* line 77, ../scss/style.scss */
+.tile header {
+  text-align: center;
+  padding: 10px;
+}
+/* line 82, ../scss/style.scss */
+.tile .tile-title, .tile .tile-subTitle {
+  color: white;
+  line-height: 1.25;
+}
+/* line 87, ../scss/style.scss */
+.tile .tile-title {
+  font-size: 2.8rem;
+}
+/* line 91, ../scss/style.scss */
+.tile .tile-subTitle {
+  font-size: 1.5rem;
+}
+/* line 95, ../scss/style.scss */
+.tile:hover {
+  background: #0960a5;
+  border-color: #0960a5;
+  box-shadow: 0 1px 40px rgba(0, 0, 0, 0.15);
+}
+/* line 100, ../scss/style.scss */
+.tile:hover img {
+  transform: scale(1.25);
+}
+/* line 105, ../scss/style.scss */
+.tile:hover article .startBtn {
+  transform: translateY(0px);
+}
+/* line 110, ../scss/style.scss */
+.tile .icon {
+  width: 100%;
+  height: 93.75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+/* line 118, ../scss/style.scss */
+.tile .icon.round > img {
   -moz-border-radius: 50px;
   -webkit-border-radius: 50px;
   border-radius: 50px;
-  box-shadow: 1px 2px 1px rgba(170, 170, 170, 0.25);
-  float: right;
 }
-/* line 81, ../scss/style.scss */
-.element .tile-title {
-  font-size: 18px;
-  width: 166.66667px;
-  height: 41.66667px;
-  text-align: center;
-  padding-top: 4px;
+/* line 123, ../scss/style.scss */
+.tile img {
+  width: 75px;
+  height: 75px;
+  transition: all 150ms ease-in-out;
 }
-/* line 89, ../scss/style.scss */
-.element .tile-text {
+/* line 128, ../scss/style.scss */
+.tile article {
   font-size: 14px;
-  height: 158.33333px;
+  color: darkslategray;
+  background-color: white;
   overflow: hidden;
+  height: 40%;
+  padding: 10px;
+  position: relative;
+}
+/* line 138, ../scss/style.scss */
+.tile article .startBtn {
+  width: calc(100% - 20px);
+  margin-bottom: 10px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  position: absolute;
+  height: 30px;
+  bottom: 0;
+  background-color: #0960a5;
+  border: 0;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(50px);
+  transition: all 0.5s;
+}
+/* line 160, ../scss/style.scss */
+.tile article .startBtn span {
+  display: inline-flex;
+  position: relative;
+  transition: 0.5s;
+}
+/* line 165, ../scss/style.scss */
+.tile article .startBtn span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+/* line 175, ../scss/style.scss */
+.tile article .startBtn:hover span {
+  padding-right: 25px;
+}
+/* line 178, ../scss/style.scss */
+.tile article .startBtn:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+/* line 186, ../scss/style.scss */
+.tile .tile-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media only screen and (max-width: 560px) {
+  /* line 193, ../scss/style.scss */
+  .header {
+    background-color: #f00;
+  }
 }

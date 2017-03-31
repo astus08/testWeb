@@ -21,3 +21,10 @@
 //     });
 // });
 
+var myApp = angular.module('myApp',[]);
+
+myApp.controller('gridCtrl', ['$scope', '$http', function($scope,$http) {
+   $http.get('search.php').success(function(data) {
+        $scope.cours = data;
+    });
+}]);
