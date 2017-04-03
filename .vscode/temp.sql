@@ -6,4 +6,4 @@ LEFT JOIN articles ON
     cours.ID = articles.ID_cours
 GROUP BY cours.ID
 ORDER BY cours.ID
-LIMIT 8
+LIMIT 12
