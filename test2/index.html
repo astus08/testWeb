@@ -27,17 +27,18 @@
                     </header>
                     <article>
                         <div class="tile-text">{{cour.description}}</div>
-                        <form action="article.php">
+                        <form action="article.html">
                             <input type="text" name="article" value={{cour.title}} class="display-none">
 
                             <label for="btn_{{cour.title}}" class="startBtn">
                                 <input type="submit" id="btn_{{cour.title}}" class="display-none">
                                 <span>Démarrer </span>
                             </label>
-
-
                         </form>
                     </article>
+                    <footer>
+                        {{cour.nbArticles}}
+                    </footer>
                 </li>
             </ul>
         </div>

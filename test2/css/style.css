@@ -171,9 +171,14 @@ body {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+/* line 191, ../scss/style.scss */
+.tile footer {
+  padding: 10px;
+  text-align: center;
+}
 
 @media only screen and (max-width: 560px) {
-  /* line 193, ../scss/style.scss */
+  /* line 198, ../scss/style.scss */
   .header {
     background-color: #f00;
   }

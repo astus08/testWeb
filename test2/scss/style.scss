@@ -13,7 +13,7 @@ $iconSize: 75px;
 
 $backgroundColor: #2196F3;
 
-* { 
+* {
     font-family: Roboto;
 }
 
@@ -186,6 +186,11 @@ body{
     .tile-text {
         overflow: hidden;
         text-overflow: ellipsis; 
+    }
+
+    footer {
+        padding: 10px;
+        text-align: center;
     }
 }
 
