@@ -13,7 +13,9 @@
 
     <body ng-app="myApp">
         <header class="header">
-            <div class="title">Cours</div>
+            <a href="index.html" class="logo-click">
+                <div class="title">Logo</div>
+            </a>
         </header>
         <div class="content">
             <ul class="grid" ng-controller="gridCtrl">
@@ -27,8 +29,8 @@
                     </header>
                     <article>
                         <div class="tile-text">{{cour.description}}</div>
-                        <form action="article.html">
-                            <input type="text" name="article" value={{cour.title}} class="display-none">
+                        <form action="cours.php">
+                            <input type="text" name="cours" value={{cour.title}} class="display-none">
 
                             <label for="btn_{{cour.title}}" class="startBtn">
                                 <input type="submit" id="btn_{{cour.title}}" class="display-none">

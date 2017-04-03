@@ -31,6 +31,14 @@ body{
     background-color: $backgroundColor;
     color: #fff;
 
+    .logo-click {
+        width: 250px; height: 100%;
+        float: left;
+
+        text-decoration: none;
+        color: #fff;
+    }
+
     .title {
         padding-top: ($headerHeigth - $titleSize)/2 - 6px;
         padding-left: 30px;

@@ -21,13 +21,21 @@ body {
   color: #fff;
 }
 /* line 34, ../scss/style.scss */
+.header .logo-click {
+  width: 250px;
+  height: 100%;
+  float: left;
+  text-decoration: none;
+  color: #fff;
+}
+/* line 42, ../scss/style.scss */
 .header .title {
   padding-top: 18px;
   padding-left: 30px;
   font-size: 52px;
 }
 
-/* line 41, ../scss/style.scss */
+/* line 49, ../scss/style.scss */
 .content {
   width: 100%;
   text-shadow: 0 0 1px rgba(255, 255, 255, 0.004);
@@ -36,7 +44,7 @@ body {
   background-color: white;
 }
 
-/* line 50, ../scss/style.scss */
+/* line 58, ../scss/style.scss */
 .grid {
   max-width: 1256px;
   margin: 0 auto;
@@ -47,7 +55,7 @@ body {
   justify-content: center;
 }
 
-/* line 62, ../scss/style.scss */
+/* line 70, ../scss/style.scss */
 .tile {
   display: block;
   margin: 10px;
@@ -59,39 +67,39 @@ body {
   border: 1px solid white;
   overflow: hidden;
 }
-/* line 77, ../scss/style.scss */
+/* line 85, ../scss/style.scss */
 .tile header {
   text-align: center;
   padding: 10px;
 }
-/* line 82, ../scss/style.scss */
+/* line 90, ../scss/style.scss */
 .tile .tile-title, .tile .tile-subTitle {
   color: white;
   line-height: 1.25;
 }
-/* line 87, ../scss/style.scss */
+/* line 95, ../scss/style.scss */
 .tile .tile-title {
   font-size: 2.8rem;
 }
-/* line 91, ../scss/style.scss */
+/* line 99, ../scss/style.scss */
 .tile .tile-subTitle {
   font-size: 1.5rem;
 }
-/* line 95, ../scss/style.scss */
+/* line 103, ../scss/style.scss */
 .tile:hover {
   background: #0960a5;
   border-color: #0960a5;
   box-shadow: 0 1px 40px rgba(0, 0, 0, 0.15);
 }
-/* line 100, ../scss/style.scss */
+/* line 108, ../scss/style.scss */
 .tile:hover img {
   transform: scale(1.25);
 }
-/* line 105, ../scss/style.scss */
+/* line 113, ../scss/style.scss */
 .tile:hover article .startBtn {
   transform: translateY(0px);
 }
-/* line 110, ../scss/style.scss */
+/* line 118, ../scss/style.scss */
 .tile .icon {
   width: 100%;
   height: 93.75px;
@@ -101,19 +109,19 @@ body {
   padding-top: 10px;
   padding-bottom: 10px;
 }
-/* line 118, ../scss/style.scss */
+/* line 126, ../scss/style.scss */
 .tile .icon.round > img {
   -moz-border-radius: 50px;
   -webkit-border-radius: 50px;
   border-radius: 50px;
 }
-/* line 123, ../scss/style.scss */
+/* line 131, ../scss/style.scss */
 .tile img {
   width: 75px;
   height: 75px;
   transition: all 150ms ease-in-out;
 }
-/* line 128, ../scss/style.scss */
+/* line 136, ../scss/style.scss */
 .tile article {
   font-size: 14px;
   color: darkslategray;
@@ -123,7 +131,7 @@ body {
   padding: 10px;
   position: relative;
 }
-/* line 138, ../scss/style.scss */
+/* line 146, ../scss/style.scss */
 .tile article .startBtn {
   width: calc(100% - 20px);
   margin-bottom: 10px;
@@ -142,13 +150,13 @@ body {
   transform: translateY(50px);
   transition: all 0.5s;
 }
-/* line 160, ../scss/style.scss */
+/* line 168, ../scss/style.scss */
 .tile article .startBtn span {
   display: inline-flex;
   position: relative;
   transition: 0.5s;
 }
-/* line 165, ../scss/style.scss */
+/* line 173, ../scss/style.scss */
 .tile article .startBtn span:after {
   content: '\00bb';
   position: absolute;
@@ -157,28 +165,28 @@ body {
   right: -20px;
   transition: 0.5s;
 }
-/* line 175, ../scss/style.scss */
+/* line 183, ../scss/style.scss */
 .tile article .startBtn:hover span {
   padding-right: 25px;
 }
-/* line 178, ../scss/style.scss */
+/* line 186, ../scss/style.scss */
 .tile article .startBtn:hover span:after {
   opacity: 1;
   right: 0;
 }
-/* line 186, ../scss/style.scss */
+/* line 194, ../scss/style.scss */
 .tile .tile-text {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-/* line 191, ../scss/style.scss */
+/* line 199, ../scss/style.scss */
 .tile footer {
   padding: 10px;
   text-align: center;
 }
 
 @media only screen and (max-width: 560px) {
-  /* line 198, ../scss/style.scss */
+  /* line 206, ../scss/style.scss */
   .header {
     background-color: #f00;
   }

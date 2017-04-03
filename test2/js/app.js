@@ -24,7 +24,18 @@
 var myApp = angular.module('myApp',[]);
 
 myApp.controller('gridCtrl', ['$scope', '$http', function($scope,$http) {
-   $http.get('search.php').success(function(data) {
+   $http.get('getCours.php').success(function(data) {
         $scope.cours = data;
+        console.log($scope.cours);
     });
+}]);
+
+myApp.controller('coursCtrl', ['$scope', '$http', function($scope,$http) {
+    $scope.init = function(name){
+        $http.get('getArticle.php?cours=' + name).success(function(data) {
+            $scope.articleList = data;
+            console.log('I call : getArticle.php?cours=' + name);
+            console.log($scope.articleList);
+        });
+    };
 }]);
