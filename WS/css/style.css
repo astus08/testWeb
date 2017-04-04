@@ -1,66 +1,45 @@
-/* line 3, ../scss/style.scss */
-body {
-  height: 100%;
+/* line 4, ../scss/style.scss */
+table {
+  border-collapse: collapse;
   width: 100%;
-  text-align: center;
-  margin: 0;
-}
-/* line 8, ../scss/style.scss */
-body img {
-  transition-duration: 0.5s;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: normal;
 }
 
-/* line 13, ../scss/style.scss */
-body.night {
-  background: #333333;
+/* line 11, ../scss/style.scss */
+th, td {
+  text-align: left;
+  padding: 8px;
 }
+
 /* line 16, ../scss/style.scss */
-body.night img.horloge {
-  transform: rotate(180deg);
+tr:nth-child(even) {
+  background-color: #f2f2f2;
 }
+
 /* line 20, ../scss/style.scss */
-body.night p {
-  color: #fff;
+.btn, .btn-delete, .btn-update, .btn-add {
+  border-radius: 10px;
+  width: 50px;
+  height: 25px;
 }
 
 /* line 25, ../scss/style.scss */
-.taquin input {
-  width: 100px;
-  height: 100px;
-  font-size: 2em;
+.btn-delete {
+  background-color: tomato;
 }
 
-/* line 30, ../scss/style.scss */
-.emptyCase {
-  background: inherit;
-  border: 2px solid transparent;
-  outline: none;
+/* line 31, ../scss/style.scss */
+.btn-update {
+  background-color: lightskyblue;
 }
 
-/* line 36, ../scss/style.scss */
-p {
-  font-size: 1.5em;
-  display: inline;
+/* line 37, ../scss/style.scss */
+.btn-add {
+  background-color: darkgray;
 }
 
-/* line 41, ../scss/style.scss */
-.jeu {
-  height: 520px;
-  width: 520px;
-  margin: auto;
-}
-
-/* line 46, ../scss/style.scss */
-.case {
-  margin: 14px;
-  border: 1px solid black;
-  width: 100px;
-  height: 100px;
-  float: left;
-  background-color: #49d5e0;
-}
-/* line 53, ../scss/style.scss */
-.case img {
-  width: 100px;
-  height: 100px;
+/* line 43, ../scss/style.scss */
+.display-none {
+  display: none;
 }

@@ -2,8 +2,8 @@
 -- version 4.6.4
 -- https://www.phpmyadmin.net/
 --
--- Client :  127.0.0.1
--- Généré le :  Sam 01 Avril 2017 à 19:01
+-- Client :  localhost
+-- Généré le :  Mar 04 Avril 2017 à 08:30
 -- Version du serveur :  5.7.14
 -- Version de PHP :  7.0.10
 
@@ -19,6 +19,29 @@ SET time_zone = "+00:00";
 --
 -- Base de données :  `test`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `articles`
+--
+
+CREATE TABLE `articles` (
+  `ID` int(11) NOT NULL,
+  `title` varchar(60) DEFAULT NULL,
+  `dateCreation` date NOT NULL,
+  `content` text,
+  `ID_cours` int(11) DEFAULT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Contenu de la table `articles`
+--
+
+INSERT INTO `articles` (`ID`, `title`, `dateCreation`, `content`, `ID_cours`) VALUES
+(1, 'Les bases', '2017-04-02', 'Voici du text su les bases du JS.', 1),
+(2, 'Notions avancé', '2017-04-03', 'Voici du contenu sur des notions avancés du JS', 1),
+(3, 'Les bases', '2017-04-01', 'Voici les bases d\'Angular JS.', 2);
 
 -- --------------------------------------------------------
 
@@ -91,6 +114,13 @@ INSERT INTO `redirect` (`ID`, `name`, `site`) VALUES
 --
 
 --
+-- Index pour la table `articles`
+--
+ALTER TABLE `articles`
+  ADD PRIMARY KEY (`ID`),
+  ADD KEY `ID_cours` (`ID_cours`);
+
+--
 -- Index pour la table `cours`
 --
 ALTER TABLE `cours`
@@ -113,6 +143,11 @@ ALTER TABLE `redirect`
 -- AUTO_INCREMENT pour les tables exportées
 --
 
+--
+-- AUTO_INCREMENT pour la table `articles`
+--
+ALTER TABLE `articles`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT pour la table `cours`
 --
