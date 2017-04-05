@@ -4,7 +4,7 @@ include('header.php');
 
 <?php
 
-$page = "";
+$page = "articles";
 $action = "";
 $id = "";
 
@@ -28,7 +28,7 @@ switch ($page) {
         break;
     
     default:
-        include('article.php');
+        echo ("<h1>404</h1>");
         break;
 }
 

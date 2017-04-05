@@ -1,10 +1,10 @@
 <table>
     <thead>
         <tr>
-            <th>#</th>
-            <th>Nom</th>
-            <th>Update</th>
-            <th>Delete</th>
+            <td>#</td>
+            <td>Nom</td>
+            <td>Update</td>
+            <td>Delete</td>
         </tr>
     </thead>
     <tbody>
@@ -17,10 +17,10 @@
                                                     ORDER BY categorie.id
                                                     ;") as $row) {
             echo "<tr>";
-            echo "<th>". $row["id"] ."</th>";
-            echo "<th>". $row["nom"] ."</th>";
-            echo "<th><input type=\"button\" name=\"delete\" class=\"btn-delete\"></th>";
-            echo "<th><input type=\"button\" name=\"update\" class=\"btn-update\"></th>";
+            echo "<td>". $row["id"] ."</td>";
+            echo "<td>". $row["nom"] ."</td>";
+            echo "<td><input type=\"button\" name=\"delete\" class=\"btn-delete\"></td>";
+            echo "<td><input type=\"button\" name=\"update\" class=\"btn-update\"></td>";
             echo "</tr>";
             $index++;
         }
