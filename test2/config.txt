@@ -12,6 +12,11 @@ cmd : compass watch
 cmd : browser-sync start --server --files "*.html, style/*.css, js/*.js"
       browser-sync start --proxy "localhost:800/testWeb/test2" --files "*.html, *.php, css/*.css, js/*.js"
 
+cmd : npm init
+      npm install --save-dev gulp
+      npm install --save-dev gulp-load-plugins
+      npm install --save-dev gulp-sass
+
 ----------------
 
 Install :
@@ -25,3 +30,11 @@ Compass :
 browser-sync :
     - Install node.js
     - cmd : npm install -g browser-sync
+
+
+node-sass :
+    - Install node.js
+    - cmd : npm install -g gulp
+
+
+node-sass -w scss/style.scss css/style.css
