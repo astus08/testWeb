@@ -1,8 +1,15 @@
-gulp =  require('gulp')
-$ =     require('gulp-load-plugins')()
+gulp            = require('gulp');
+$               = require('gulp-load-plugins')();
+
+browserSync     = require('browser-sync').create();
 
 var path_css    = 'css/';
 var path_scss   = 'css/';
+
+gulp.task('browserReload', function() {
+    browserSync.reload();
+    done();
+});
 
 gulp.task('sass', function(){
     gulp.src(path_scss + '*.scss')
@@ -15,5 +22,11 @@ gulp.task('sass', function(){
 
 
 gulp.task('default', function(){
+    browserSync.init({
+        proxy: "localhost:8080/projets/testWeb/test2"
+    });
+
     gulp.watch(path_scss + '**/*.scss', ['sass'])
+
+    gulp.watch("*.html", ['browserReload']);
 })

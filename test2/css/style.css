@@ -35,9 +35,12 @@ body {
   margin: 0 auto;
   list-style: none;
   padding: 0;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center; }
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: center;
+      justify-content: center; }
 
 .tile {
   display: block;
@@ -70,14 +73,15 @@ body {
   .tile .icon {
     width: 100%;
     height: 93.75px;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -ms-flex-pack: center;
+        justify-content: center;
+    -ms-flex-align: center;
+        align-items: center;
     padding-top: 10px;
     padding-bottom: 10px; }
     .tile .icon.round > img {
-      -moz-border-radius: 50px;
-      -webkit-border-radius: 50px;
       border-radius: 50px; }
   .tile img {
     width: 75px;
@@ -94,8 +98,6 @@ body {
     .tile article .startBtn {
       width: calc(100% - 20px);
       margin-bottom: 10px;
-      -moz-border-radius: 5px;
-      -webkit-border-radius: 5px;
       border-radius: 5px;
       position: absolute;
       height: 30px;
@@ -103,12 +105,16 @@ body {
       background-color: #0960a5;
       border: 0;
       color: white;
+      display: -ms-flexbox;
       display: flex;
-      justify-content: center;
-      align-items: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+      -ms-flex-align: center;
+          align-items: center;
       transform: translateY(50px);
       transition: all 0.5s; }
       .tile article .startBtn span {
+        display: -ms-inline-flexbox;
         display: inline-flex;
         position: relative;
         transition: 0.5s; }

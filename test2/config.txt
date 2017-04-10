@@ -8,11 +8,18 @@ javascripts_dir = "/js/"
 
 ----------------
 
-gulp =  require('gulp')
-$ =     require('gulp-load-plugins')()
+gulp            = require('gulp');
+$               = require('gulp-load-plugins')();
+
+browserSync     = require('browser-sync').create();
 
 var path_css    = 'css/';
 var path_scss   = 'css/';
+
+gulp.task('browserReload', function() {
+    browserSync.reload();
+    done();
+});
 
 gulp.task('sass', function(){
     gulp.src(path_scss + '*.scss')
@@ -25,7 +32,13 @@ gulp.task('sass', function(){
 
 
 gulp.task('default', function(){
+    browserSync.init({
+        proxy: "localhost:8080/projets/testWeb/test2"
+    });
+
     gulp.watch(path_scss + '**/*.scss', ['sass'])
+
+    gulp.watch("*.html", ['browserReload']);
 })
 
 ----------------
@@ -41,11 +54,12 @@ cmd : npm install -g gulp
       npm install --save-dev gulp-load-plugins
       npm install --save-dev gulp-sass
       npm install --save-dev gulp-autoprefixer
+      npm install --save-dev browser-sync
 
 Include gulpfile.js in the project
 
 cmd : browser-sync start --server --files "*.html, style/*.css, js/*.js"
-      browser-sync start --proxy "localhost:800/testWeb/test2" --files "*.html, *.php, css/*.css, js/*.js"
+      browser-sync start --proxy "localhost:8080/testWeb/test2" --files "*.html, *.php, css/*.css, js/*.js"
 
 ----------------
 
