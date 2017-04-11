@@ -17,9 +17,7 @@ gulp.task('browser_reload', function(done) {
 gulp.task('sass_compilation_+_prefixer', function(){
     gulp.src(path.scss + '*.scss')
     .pipe($.sass().on('error', $.sass.logError))
-    .pipe($.autoprefixer({
-        browsers: ['last 2 versions']
-    }))
+    .pipe($.autoprefixer())
     .pipe(gulp.dest(path.css));
 })
 
