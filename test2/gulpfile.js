@@ -6,7 +6,7 @@ browserSync     = require('browser-sync').create();
 var path_css    = 'css/';
 var path_scss   = 'css/';
 
-gulp.task('browserReload', function() {
+gulp.task('browserReload', function(done) {
     browserSync.reload();
     done();
 });
@@ -23,7 +23,7 @@ gulp.task('sass', function(){
 
 gulp.task('default', function(){
     browserSync.init({
-        proxy: "localhost:8080/projets/testWeb/test2"
+        proxy: "localhost:8080/testWeb/test2"
     });
 
     gulp.watch(path_scss + '**/*.scss', ['sass'])

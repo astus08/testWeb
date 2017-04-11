@@ -1,5 +1,0 @@
-http_path = "/"
-css_dir = "/css/"
-sass_dir = "/scss/"
-image_dir = "/"
-javascripts_dir = "app/webroot/js"
